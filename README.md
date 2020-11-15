@@ -9,7 +9,7 @@ Demo MediaGoblin
 
 All data are lost when the container is stopped.
 
-    sudo docker run -p 8080:80 dachary/mediagoblin
+    sudo docker run -p 8080:80 mfiqsaperi/mediagoblin
     www-browser http://localhost:8080
 
 The default user is admin, password admin.
@@ -90,10 +90,10 @@ Publish a new version:
     version=0.8.1
     git checkout -b v$version v$version
     docker login
-    docker build -t dachary/mediagoblin:$version .
+    docker build -t mfiqsaperi/mediagoblin:$version .
     docker push dachary/mediagoblin:$version
 
 Publish the latest:
 
-    docker build -t dachary/mediagoblin .
+    docker build -t mfiqsaperi/mediagoblin .
     docker push dachary/mediagoblin
