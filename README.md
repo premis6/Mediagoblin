@@ -16,7 +16,7 @@ Demo MediaGoblin locally
 
 The image is built locally, there is no dependency to the Docker registry. All data are lost when the container is stopped.
 
-    git clone https://notabug.org/dachary/mediagoblin-docker.git
+    git clone https://notabug.org/fiq/mediagoblin-docker.git
     sudo docker build -t mediagoblin-demo mediagoblin-docker
     sudo docker run -p 8080:80 mediagoblin-docker
     www-browser http://localhost:8080
@@ -28,7 +28,7 @@ Run MediaGoblin
 
 The data is preserved in /srv/mediagoblin.
 
-    git clone https://notabug.org/dachary/mediagoblin-docker.git
+    git clone https://notabug.org/fiq/mediagoblin-docker.git
     sudo docker build -t mediagoblin-demo mediagoblin-docker
     sudo mkdir /srv/mediagoblin
     sudo docker --name mediagoblin run -p 8080:80 \
@@ -46,7 +46,7 @@ After installing [Dokku](http://dokku.viewdocs.io/dokku/installation/), follow t
      dokku apps:create loic
      mkdir /srv/loic
      dokku docker-options:add loic deploy "-v /srv/loic:/var/lib/mediagoblin"
-     git clone -b v0.8.1 https://notabug.org/dachary/mediagoblin-docker.git
+     git clone -b v0.8.1 https://notabug.org/fiq/mediagoblin-docker.git
      cd mediagoblin-docker
      git remote add dokku dokku@gmg.the.re:loic
      git push dokku v0.8.1:master
@@ -66,7 +66,7 @@ If the data is preserved in /srv/mediagoblin as described above, upgrade by stop
 
     sudo docker stop mediagoblin
     rm -fr mediagoblin-docker
-    git clone https://notabug.org/dachary/mediagoblin-docker.git
+    git clone https://notabug.org/fiq/mediagoblin-docker.git
     sudo docker build -t mediagoblin-demo mediagoblin-docker
     sudo docker --name mediagoblin run -p 8080:80 \
          -v /srv/mediagoblin:/var/lib/mediagoblin \
