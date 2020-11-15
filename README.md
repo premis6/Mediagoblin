@@ -1,5 +1,3 @@
-# Mediagoblin
-
 Dockerized http://mediagoblin.org/
 ==================================
 
