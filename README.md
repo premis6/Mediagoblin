@@ -1,5 +1,8 @@
-Dockerized http://mediagoblin.org/
-==================================
+Mediagoblin
+
+Dockerized http://mediagoblin.org/ (DigitalOcean)
+
+
 
 Demo MediaGoblin
 ----------------
